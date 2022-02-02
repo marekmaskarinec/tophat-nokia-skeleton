@@ -1,0 +1,15 @@
+
+import (
+	"th.um"
+	"rect.um"
+)
+
+const (
+	lightColor* = 0xc7f0d8ff
+	darkColor* = 0x43523dff
+)
+
+var (
+	cam*: rect.Rect
+	camPos*: th.Vf2
+)
