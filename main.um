@@ -6,6 +6,7 @@ import (
 	"window.um"
 
 	"global.um"
+	"noksnd.um"
 )
 
 // In global.um, there are lightColor and darkColor constants - the two allowed
@@ -17,10 +18,16 @@ import (
 //   - transform positions - employ similar approach used with cam
 //   - rotation - you can only use multiples of 90 degrees
 
+// The noksnd.um module ensures, that only one sound is played at once. When you
+// load a sound, register it using addSound. If you want to play it, pass it to
+// the play function instead of using the play method like usual.
+
 fn main() {
 	// normal setup
 	window.setup("nokia game", 840, 480)
 	global.cam = rect.mk(0, 0, 84, 48)
+
+	noksnd.init()
 
 	for window.cycle(global.cam) {
 		// draw background

@@ -1,0 +1,23 @@
+
+import (
+	"audio.um"
+)
+
+var (
+	sounds: []audio.Sound
+)
+
+fn init*() {
+	sounds = []audio.Sound{}
+}
+
+fn addSound*(snd: audio.Sound) {
+	sounds = append(sounds, snd)
+}
+
+fn play*(snd: audio.Sound) {
+	for s in sounds {
+		s.stop()
+	}
+	snd.play()
+}
