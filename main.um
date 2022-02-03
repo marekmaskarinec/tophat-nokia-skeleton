@@ -15,6 +15,7 @@ import (
 //   - decimal sizes of font
 //   - particles (there is currently no pixel perfect mode)
 //   - transform positions - employ similar approach used with cam
+//   - rotation - you can only use multiples of 90 degrees
 
 fn main() {
 	// normal setup
