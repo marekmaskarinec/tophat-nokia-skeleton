@@ -17,6 +17,8 @@ import (
 //   - particles (there is currently no pixel perfect mode)
 //   - transform positions - employ similar approach used with cam
 //   - rotation - you can only use multiples of 90 degrees
+//   - canvas.drawLine - the drawLine function doesn't draw a pixelized line.
+//       I recommend implementing the Bresenham's line algorithm.
 
 // The noksnd.um module ensures, that only one sound is played at once. When you
 // load a sound, register it using addSound. If you want to play it, pass it to
